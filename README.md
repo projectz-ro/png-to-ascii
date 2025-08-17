@@ -68,26 +68,44 @@ Continue with these settings? (Y/N)
 
 You need **Go 1.20+** installed.
 
-### Option 1: Install directly (recommended)
-
-```bash
-go install github.com/projectz-ro/png-to-ascii/cmd@latest
-```
-
-This places `png-to-ascii` in your `GOPATH/bin` (or `GOBIN`).
-Make sure that folder is on your system `PATH`.
-
-### Option 2: Clone and build manually
-
 ```bash
 git clone https://github.com/projectz-ro/png-to-ascii.git
 cd png-to-ascii
-go build -o png-to-ascii ./cmd
+make
 ```
 
-This will produce an executable `png-to-ascii` in the project root.
+This will produce an executable `png-to-ascii` in `png-to-ascii/build/` folder.
 
----
+### Running the program:
+
+#### Linux/macOS:
+
+You can run it directly from the build folder:
+
+```bash
+./build/png-to-ascii
+```
+
+Or move it to a directory in your PATH to access from anywhere on
+your system using just the name of the program:
+
+```bash
+sudo mv build/png-to-ascii /usr/local/bin/
+```
+
+then, whenever you want to run it..
+
+```bash
+png-to-ascii
+```
+
+#### Windows (PowerShell):
+
+```powershell
+.\build\png-to-ascii.exe
+```
+
+After this, the program is ready to use. You don’t need to modify anything else—just follow the interactive prompts to convert PNG images to ASCII art.---
 
 ## Usage
 
