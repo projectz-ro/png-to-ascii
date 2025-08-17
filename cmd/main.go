@@ -3,12 +3,12 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"github.com/projectz-ro/png-to-ascii/utils"
 	"image"
 	"image/png"
 	"log"
 	"os"
 	"path/filepath"
-	"png-to-ascii/utils"
 	"strconv"
 	"strings"
 

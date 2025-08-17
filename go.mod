@@ -1,4 +1,4 @@
-module png-to-ascii
+module github.com/projectz-ro/png-to-ascii
 
 go 1.24.6
 
