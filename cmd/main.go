@@ -28,6 +28,38 @@ var (
 	colored        bool           = true
 )
 
+func showHelp() {
+	fmt.Println("PNG to ASCII Converter")
+	fmt.Println()
+	fmt.Println("Description:")
+	fmt.Println("  Converts PNG images to ASCII art. Operates interactively, prompting")
+	fmt.Println("  the user for input directory, output directory, and base filename.")
+	fmt.Println()
+	fmt.Println("Usage:")
+	fmt.Println("  Run the program without arguments to enter interactive mode.")
+	fmt.Println("  --help, -h     Show this help message")
+	fmt.Println()
+	fmt.Println("Interactive Prompts:")
+	fmt.Println("  1. Enter input directory:   Directory containing PNG images")
+	fmt.Println("  2. Enter output directory:  Directory where ASCII files will be written")
+	fmt.Println("  3. Enter output file base:  Base name for ASCII output files (e.g., ascii_)")
+	fmt.Println("  4. Enter ASCII character width:  Desired width in characters for output")
+	fmt.Println("  5. Enter brightness multiplier:  Characters are chosen by brightness, increase for higher visibility")
+	fmt.Println("  6. Output with ANSI colors?:  Take the colors from the PNG input using color codes")
+	fmt.Println()
+	fmt.Println("Example:")
+	fmt.Println("  Enter input directory: ./images")
+	fmt.Println("  Enter output directory: ./ASCII")
+	fmt.Println("  Enter output file base name: ascii_")
+	fmt.Println("  Enter ASCII character width:  60")
+	fmt.Println("  Enter brightness multiplier:  4")
+	fmt.Println("  Output with ANSI colors?:  Y")
+	fmt.Println()
+	fmt.Println("Notes:")
+	fmt.Println("  - Only PNG files are processed; other files are ignored.")
+	fmt.Println("  - Output files will be named <base><input_name>.txt, e.g., first.png -> ascii_first.txt")
+}
+
 func configure() {
 	cwd, err := os.Getwd()
 	if err != nil {
